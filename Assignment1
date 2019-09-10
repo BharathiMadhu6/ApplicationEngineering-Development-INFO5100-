@@ -42,9 +42,9 @@ Method3 :
           {
               carPrice decided based on the type of car selected
               int price = carPrice * numberOfDays * tax;
-              if CreditCard.payment(true) -------------------------TBC
+              if CreditCard.CardValidity(true) -------------------------TBC
               {
-                  int bookingID = Generate ID
+                  int bookingID = Generate an ID
               }
               else
                   Booking unsuccessful
@@ -82,5 +82,33 @@ Method1 :
                 checks the validity of card through th expiry date and a card number validating algorithm
             }
             
+Method2 : 
+            payment() ?????? ------- TBC
+            {
+                
+            
+            
 ------------------------------------------------------------------------------------------------------------------------
               
+Class : CarDealer
+Attributes : CarList, Insurance, CarTypes
+
+Method1 :
+            FetchCars(location,from_date,end_date,CarType)
+            {
+                This loop fetches the cars that match the search and stores them in a list called fetchedList
+     
+                for(int i=0; i<CarList's size ; i++)
+                {
+                    if CarType.available == true
+                    then 
+                        is carDealer.car.location matches search && carDealer.car.from_date.available == true 
+                        && carDealer.car.end_date == true
+                        {
+                            add car to fetchedList
+                        }
+                    else 
+                        come out of if loop
+                }
+                return fetchedList 
+            }
