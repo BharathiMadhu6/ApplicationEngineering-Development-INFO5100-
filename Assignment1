@@ -115,3 +115,61 @@ Method1 :
                 }
                 return fetchedList 
             }
+            
+            
+            
+            
+            
+            
+ ******************************************************************************************************
+ 
+ Course Registration Platform
+ 
+ 
+ Student can :
+                1. Register for a course
+                2. Drop a course
+                3. Check teachers profiles
+                4. Read about the course
+                
+ Department :
+                1. accept students to a course
+                2. Have a waitlist
+                3. 
+                
+                
+                
+ class : Student 
+ Attributes : stuID, name, minCredits, deptName, sem, year,course1,course2,course3
+ 
+ 
+ Method1 :
+            Login(uname,pwd)
+            {
+                if (Student.uname ==valid&existsInDataBase && Student.pwd==matchesUname)
+                then
+                {
+                    login successful
+                }
+                else
+                    login failed
+            }
+            
+ Method2 : 
+            register(stuID,deptname,year)
+            {
+                int minCredits=8;
+                int curCredits=0;
+                if (student.stuID == valid && student.deptname == valid)
+                {
+                    courseList=display the list of courses available for that dept corresponding to the year as well
+                    student.course1 = select 1 course from courseList;
+                    curCredits=4;
+                    if(curCredits<minCredits)
+                    {
+                        System.out.println("alert!! a minimum of 8 credits is a must");
+                        courseList=display the list of courses available for that dept corresponding to the year as well
+                        student.course2 = select 1 course from courseList;
+                        curCredits=curCredits+4;
+                    }
+              }
