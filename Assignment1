@@ -45,6 +45,7 @@ Method3 :
               if CreditCard.CardValidity(true) -------------------------TBC
               {
                   int bookingID = Generate an ID
+                  Print("Your car has been booked, your booking ID is" +bookingID);
               }
               else
                   Booking unsuccessful
@@ -85,6 +86,8 @@ Method1 :
 Method2 : 
             payment() ?????? ------- TBC
             {
+                Print(" enter the card number, name, exp date and CVV");
+            }
                 
             
             
