@@ -129,18 +129,16 @@ Method1 :
  Student can :
                 1. Register for a course
                 2. Drop a course
-                3. Check teachers profiles
-                4. Read about the course
+               
                 
  Department :
                 1. accept students to a course
                 2. Have a waitlist
-                3. 
                 
                 
                 
  class : Student 
- Attributes : stuID, name, minCredits, deptName, sem, year,course1,course2,course3
+ Attributes : stuID, name, minCredits, deptName, sem, year,courseList[];
  
  
  Method1 :
@@ -162,14 +160,50 @@ Method1 :
                 int curCredits=0;
                 if (student.stuID == valid && student.deptname == valid)
                 {
-                    courseList=display the list of courses available for that dept corresponding to the year as well
-                    student.course1 = select 1 course from courseList;
+                    courseDisp=display the list of courses available for that dept corresponding to the year as well
+                    student.courseList[0] = select 1 course from courseList;
                     curCredits=4;
                     if(curCredits<minCredits)
                     {
                         System.out.println("alert!! a minimum of 8 credits is a must");
-                        courseList=display the list of courses available for that dept corresponding to the year as well
-                        student.course2 = select 1 course from courseList;
+                        courseDisp=display the list of courses available for that dept corresponding to the year as well
+                        student.courseList[1] = select 1 course from courseList;
                         curCredits=curCredits+4;
                     }
               }
+              
+ 
+ Method3 :
+            dropCourse(stuID)
+            {
+                select the course you want to drop
+                if (student.stuID == valid)
+                {
+                    student.courseList[].drop(stuID);
+                }
+            }
+            
+ Method4 : 
+            drop(stuID)
+            {
+                courseList[]--;
+                //delete course from the course list
+            }
+ --------------------------------------------------------------------------------------------------------------------
+ 
+ 
+ class : Department
+ Attributes : dID, name, dcourseList[],courseID;
+ 
+ 
+ Method1 :
+            accept_student(stuID,courseID)
+            {
+                if (stuID==valid)
+                {
+                    courseID.addToItsListOfStudents;
+                    courseID.students++;
+                }
+               print("there are" + courseID.students "enrolled for" +courseID "for now");
+            }
+                 
