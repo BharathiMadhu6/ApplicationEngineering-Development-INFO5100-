@@ -1,0 +1,117 @@
+**************************************************************************************************************
+
+Parking Lot
+
+Parking System can :
+			1. Check space and accommodate cars
+			2. Calculate parking fee
+			3. Accept payment via card  
+			3. calculate price based on car size
+			
+
+Car Customer can :
+			1. pay the parking fee
+			2. extend the time of parking 
+
+
+Class : ParkingSystem
+Attributes : LocationsList[], carSlots[], slotID, isEmpty, carSize1, carSize2
+		carSize1==sedan
+		carSize2==SUV
+
+Method1 : 
+		boolean SpaceAvailability(carSlots[])
+		{
+			if(carSlots[].slotID.isEmpty == true)
+			{
+				print “Space available at ” +carSlots[].slotID ;
+				return true;
+			}
+			else
+				print “Parking lot currently full”
+				return false;
+		}
+
+
+Method2 :
+		CalculateFee()
+		{
+			byte pricePerHourSize1 == 5;
+			byte pricePerHourSize2 == 7;
+			byte opt = print “ select size from menu 1. sedan 2. SUV” ;
+
+			if(opt==1)
+			{
+				totPrice = pricePerHourSize1 * noOfHours 
+				return totPrice;
+				AcceptPayment
+			}
+			if(opt==2)
+			{		
+				totPrice = pricePerHourSize2 * noOfHours 
+				return totPrice;
+			}
+		}
+
+
+Method3 :
+		AcceptPayment(cardNumber, expDate, cvv, totPrice)
+		{
+			if(ParkingSystem.verify())
+			{
+				charge card totPrice;
+			}
+			else
+			Print “Invalid card details, try again”
+		}
+
+
+Method4 :
+		boolean verify(cardNumber, expDate, cvv)
+		{
+		if(cardNumber == valid && expDate > currentDate && cvv == matches cardNumber)
+		{
+			return true;
+		}
+		else
+			return false;
+		}
+
+——————————————————————————————————————————-
+
+Class : Customer
+Attributes : totPrice, parkingID
+
+Method1 :
+		PayFee(cardNumber, expDate, cvv, totPrice,)
+		{
+			totPrice=ParkingSystem.CalculateFee(carSize);
+			if(ParkingSystem.verify())
+			{
+				
+				ParkingSystem.AcceptPayment(cardNumber, expDate, cvv, totPrice)
+				byte parkingID == generate an ID;
+				Print the receipt ;
+			}
+			else
+				Print “ payment failed, try again” ;
+		}
+
+
+Method2 :
+		extendParking()
+		{
+		 	byte option = print “ select from Menu : 1. new parking
+						      2. extend parking”
+			if(option == 1)
+			{
+				ParkingSystem.CalculateFee()
+			}
+			if(option == 2)
+			{
+				pid = print “enter your parkingID” ;
+				// entering parking id lists the car details and number of hours
+				hr = print “ enter how many hrs you want to extend” ;
+				ParkingSystem.AcceptPayment(cardNumber, expDate, cvv, totPrice);
+			}	
+		}
