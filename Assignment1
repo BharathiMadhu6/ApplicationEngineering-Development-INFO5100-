@@ -138,7 +138,7 @@ Method1 :
                 
                 
  class : Student 
- Attributes : stuID, name, minCredits, deptName, sem, year,courseList[];
+ Attributes : stuID, name, minCredits, deptName, sem, year,courseList[],studentList[];
  
  
  Method1 :
@@ -162,14 +162,27 @@ Method1 :
                 {
                     courseDisp=display the list of courses available for that dept corresponding to the year as well
                     student.courseList[0] = select 1 course from courseList;
+                    if courseID.studentList[]==maxNumberOfStudents=60;
+                    {
+                        department.wait_Listing(stuID,courseID)
+                    }
+                    else
+                    department.accept_student(stuID,courseID);
                     curCredits=4;
                     if(curCredits<minCredits)
                     {
                         System.out.println("alert!! a minimum of 8 credits is a must");
                         courseDisp=display the list of courses available for that dept corresponding to the year as well
                         student.courseList[1] = select 1 course from courseList;
+                        if courseID.studentList[]==maxNumberOfStudents=60;
+                    {
+                        department.wait_Listing(stuID,courseID)
+                    }
+                    else
+                        department.accept_student(stuID,courseID);
                         curCredits=curCredits+4;
                     }
+                 
               }
               
  
@@ -193,7 +206,7 @@ Method1 :
  
  
  class : Department
- Attributes : dID, name, dcourseList[],courseID;
+ Attributes : dID, name, dcourseList[],courseID,studentList[],maxNumberOfStudents=60,waitList[];
  
  
  Method1 :
@@ -206,4 +219,17 @@ Method1 :
                 }
                print("there are" + courseID.students "enrolled for" +courseID "for now");
             }
+              
+              
+ Method2 :
+            wait_listing(stuID,courseID)
+            {
+                if(stuID==valid)
+                {
+                    if (student.stuID = wants to enroll to courseID.studentList == maxNumberOfStudents)
+                    {
+                        waitList[]++
+                        student added to waitList if the maximum enrollment is reached
+                    }
+                }
                  
