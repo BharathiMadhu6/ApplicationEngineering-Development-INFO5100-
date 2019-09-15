@@ -1,0 +1,112 @@
+******************************************************************************************************
+ 
+ Course Registration Platform
+ 
+ 
+ Student can :
+                1. Register for a course
+                2. Drop a course
+               
+                
+ Department :
+                1. accept students to a course
+                2. Have a waitlist
+                
+                
+                
+ class : Student 
+ Attributes : stuID, name, minCredits, deptName, sem, year,courseList[],studentList[];
+ 
+ 
+ Method1 :
+            Login(uname,pwd)
+            {
+                if (Student.uname ==valid&existsInDataBase && Student.pwd==matchesUname)
+                then
+                {
+                    login successful
+                }
+                else
+                    login failed
+            }
+            
+ Method2 : 
+            register(stuID,deptname,year)
+            {
+                int minCredits=8;
+                int curCredits=0;
+                if (student.stuID == valid && student.deptname == valid)
+                {
+                    courseDisp=display the list of courses available for that dept corresponding to the year as well
+                    student.courseList[0] = select 1 course from courseList;
+                    if courseID.studentList[]==maxNumberOfStudents=60;
+                    {
+                        department.wait_Listing(stuID,courseID)
+                    }
+                    else
+                    department.accept_student(stuID,courseID);
+                    curCredits=4;
+                    if(curCredits<minCredits)
+                    {
+                        System.out.println("alert!! a minimum of 8 credits is a must");
+                        courseDisp=display the list of courses available for that dept corresponding to the year as well
+                        student.courseList[1] = select 1 course from courseList;
+                        if courseID.studentList[]==maxNumberOfStudents=60;
+                    {
+                        department.wait_Listing(stuID,courseID)
+                    }
+                    else
+                        department.accept_student(stuID,courseID);
+                        curCredits=curCredits+4;
+                    }
+                 
+              }
+              
+ 
+ Method3 :
+            dropCourse(stuID)
+            {
+                select the course you want to drop
+                if (student.stuID == valid)
+                {
+                    student.courseList[].drop(stuID);
+                }
+            }
+            
+ Method4 : 
+            drop(stuID)
+            {
+                courseList[]--;
+                //delete course from the course list
+            }
+ --------------------------------------------------------------------------------------------------------------------
+ 
+ 
+ class : Department
+ Attributes : dID, name, dcourseList[],courseID,studentList[],maxNumberOfStudents=60,waitList[];
+ 
+ 
+ Method1 :
+            accept_student(stuID,courseID)
+            {
+                if (stuID==valid)
+                {
+                    courseID.addToItsListOfStudents;
+                    courseID.students++;
+                }
+               print("there are" + courseID.students "enrolled for" +courseID "for now");
+            }
+              
+              
+ Method2 :
+            wait_listing(stuID,courseID)
+            {
+                if(stuID==valid)
+                {
+                    if (student.stuID = wants to enroll to courseID.studentList == maxNumberOfStudents)
+                    {
+                        waitList[]++
+                        student added to waitList if the maximum enrollment is reached
+                    }
+                }
+            }
