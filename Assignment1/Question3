@@ -7,11 +7,14 @@
                 1. Register for a course
                 2. Drop a course
                
-                
+ Registration Portal :
+                       1. functionality for registering to a course
+                       2. functionality for dropping a course
  Department :
                 1. accept students to a course
                 2. Have a waitlist
-                
+       
+       
 class : Student
 Attributes : stuID, name, pwd, minCredits, deptName, sem, year, courseList[]
 
@@ -26,6 +29,13 @@ Attributes : stuID, name, pwd, minCredits, deptName, sem, year, courseList[]
                 else
                     login failed
             }
+            
+            
+ Method2 :
+             RegisterToCourse(stuID,deptname,year)
+             {
+                 RegistrationPortal.register(stuID,deptname,year);
+             }
 ------------------------------------------------------------------------------------------------------------------
                 
 class : RegistrationPortal
