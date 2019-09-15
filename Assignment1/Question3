@@ -36,6 +36,7 @@ Attributes : stuID, name, pwd, minCredits, deptName, sem, year, courseList[]
              {
                  RegistrationPortal.register(stuID,deptname,year);
              }
+             
 ------------------------------------------------------------------------------------------------------------------
                 
 class : RegistrationPortal
