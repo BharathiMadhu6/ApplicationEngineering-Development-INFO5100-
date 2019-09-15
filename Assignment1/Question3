@@ -12,16 +12,13 @@
                 1. accept students to a course
                 2. Have a waitlist
                 
-                
-                
- class : Student 
- Attributes : stuID, name, minCredits, deptName, sem, year,courseList[],studentList[];
- 
- 
+class : Student
+Attributes : stuID, name, pwd, minCredits, deptName, sem, year, courseList[]
+
  Method1 :
             Login(uname,pwd)
             {
-                if (Student.uname ==valid&existsInDataBase && Student.pwd==matchesUname)
+                if (Student.name ==valid&existsInDataBase && Student.pwd==matchesUname)
                 then
                 {
                     login successful
@@ -29,8 +26,12 @@
                 else
                     login failed
             }
-            
- Method2 : 
+------------------------------------------------------------------------------------------------------------------
+                
+class : RegistrationPortal
+ Attributes : studentList[];
+        
+ Method1 : 
             register(stuID,deptname,year)
             {
                 int minCredits=8;
@@ -63,18 +64,19 @@
               }
               
  
- Method3 :
+ Method2 :
             dropCourse(stuID)
+            student = studentList[stuID]
             {
                 select the course you want to drop
                 if (student.stuID == valid)
                 {
-                    student.courseList[].drop(stuID);
+                    student.courseList[].drop();
                 }
             }
             
- Method4 : 
-            drop(stuID)
+ Method3 : 
+            drop()
             {
                 courseList[]--;
                 //delete course from the course list
