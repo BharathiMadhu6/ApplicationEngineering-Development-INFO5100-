@@ -1,0 +1,5 @@
+8/10
+raiseSalary method should be in employee class
+FizzBuzz method should print either Fizz, Buzz or FizzBuzz for each employee 
+There are methods which ask for return type calculateTax, employeesAgeGreaterThan50 etc.. 
+you should return calculated value from them not just print
