@@ -1,0 +1,102 @@
+Q 9 :
+
+Encapsulation is a way to protect our class’s members from any sort of illegal or faulty usage . 
+We achieve encapsulation by making the member variables of class private. 
+To access their values or to even set their values we make use of the getter and setter methods for each member variable. 
+We do not achieve complete safety by just making use of getters and setters, to ensure the members are set to valid values, 
+conditions are added in setter methods. 
+
+For example : 
+
+Class bankAccount 
+{
+	private int accNumber;
+	private String accHolderName;
+	private double accBalance;
+	private double withdrrawAmount;
+
+	//setters 
+  
+
+	public void setAccNumber (int acccNumber)
+	{
+		if(accNumber==0 || accNumber<0) {
+			throw new IllegalArgumentException(“ accNumber cannot be negative or equal to zero “);
+		}
+		this.accNumber = accNumber ;  
+ 	}
+
+	
+	public void setAccHolderName(String accHolderName)
+	{
+		if(accHolderName==“ “ && accHolderName.length() > 100) {
+			throw  new IllegalArgumentException(“ acc holder name cannot be empty or greater than 100 characters “);
+		}
+		this.accHolderName = accHolderName ;
+	}
+
+	public void setAccBalance(double accBalance)
+	{
+		if(accBalance < = 0 || accBalance < 6000) {
+			throw  new IllegalArgumentException(“ acc balance cannot be this low, check transactions“);
+		}
+		this.accBalance = accBalance ;
+	}
+
+	public void setWithdrawAmount(double withdrrawAmount)
+	{
+		if(withdrrawAmount > 500) {
+			throw  new IllegalArgumentException(“ Withdraw amount cannot be greater than 500“);		
+		}
+		this.withdrawAmount=withdrawAmount;
+	}
+
+	//getters 
+  
+
+	public int getAccNumber()
+	{
+		return accNumber ;  
+ 	}
+	
+	public  String getAccHolderName()
+	{
+		return accHolderName ;
+	}
+
+	public double setAccBalance()
+	{
+		return accBalance ;
+	}
+
+	public double setWithdrawAmount()
+	{
+		return withdrawAmount;
+	}
+
+	
+	public static void main(String[] args)
+	{
+		bankAccount acc = new bankAccount();
+		bankAccount acc1 = new bankAccount();
+
+		acc.setAccNumber(11223); //valid
+		acc1.setAccNumber(0); //Invalid
+		
+		System.out.println( acc.getAccNumber()+ “Is the account number”) ;
+		.	
+		.
+		.(We use the rest of the setters and getters similarly)
+	}
+}
+
+
+
+Q10 :
+
+The main difference between encapsulation and abstraction is that in abstraction we only give out the details that are 
+required and hide the unwanted details.So abstractions intention is to hide all the complex work that goes on. 
+Where as in encapsulation, we restrict the access to core data by mandating the usage of getters and setters.
+Encapsulation plays the biggest role when its time to change the implementation about any modifications related to 
+variables without having to change at every occurrence.  We only have to do it in one method. 
+		
