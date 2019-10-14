@@ -1,0 +1,20 @@
+Question 1 
+
+Finally : 
+	Finally block is a part of exception handling in Java. The finally block gets executed matter what i.e., 
+  even if the try block is successful or unsuccessful. The Compiler first executes the try block, if an exception is thrown, 
+  catch block is executed and immediately goes to finally. If an exception is not thrown, catch block is skipped and finally 
+  is executed.Therefore, we put in the code / statements that we want to be executed in either situation in the finally block.
+
+
+Final :
+	Final is a keyword that is used when you do not want something to be modified or to remain a constant. 
+  It is used on a class, method, variable and also to a reference. 
+How it behaves :
+	1. Class : when a class is made final, it cannot be inherited. Since the class itself is final, its methods need not be 
+     marked explicitly.
+	2. Methods : such methods cannot be overridden. They can only be used in its original form.
+	3. Variable : final variables once assigned to a value during initialization, cannot be modified as long as the class 
+     its defined in exists. example : PI = 22 / 7
+	4. Reference : when a reference variable is declared final and assigned to an object, it’s done, it cannot be assigned to 
+     any other object no matter what
