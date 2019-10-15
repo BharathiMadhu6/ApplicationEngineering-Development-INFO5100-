@@ -1,0 +1,35 @@
+Order of statements :
+
+In the main method :
+ - Class B's object 'b' is created
+ - list object is created and the elements (1,2,3) are added
+ - Class B's addAll() method is called and the list is passed as its argument
+        - In Class B's addAll() :
+          - addCount is initially : 0
+          - c.size() = 3
+          - addCount = 3
+          - next class A's addAll() method is called
+            - In Class A's addAll() :
+              - Iterator object it is created
+              - it.hasNext() will be true
+              - this.add(it.next()) method will call Class B's add() method
+                 - In Class B's add() method :
+                    - addCount ++ will hold : 4
+                    - call the Class A's add() method 
+                        - In Class A's add() method :
+                            - add method of list is used to add the object into it
+                            - and return true
+                    - true is returned to Class B's add() method
+              - return true 
+              - Class B's add() is called 
+                - addCount ++ will hold = 5
+                  - Class A's add() is called and element is added to list
+              - Class B's add() is called
+                - addCount ++ will hold = 6
+            - In class A's addAll() method while statement will not hold and the control is returned to main()
+              
+  - In main() method print statement : 
+    - b.getAddCount() will return 6 
+    - b.getI() will return 0 
+    - 6 + 0 = 6
+                    
