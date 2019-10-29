@@ -1,0 +1,17 @@
+Difference 1
+
+ArrayList
+	- We can access elements in arrayList by its index.
+
+LinkedList 
+	- In LinkedList the nodes cannot be accessed directly, we have to start from the head and follow until the desired element
+    is reached.
+
+
+Difference 2
+
+ArrayList
+	- Is straightforward, it holds only the value of the element.
+
+LinkedList 
+	- where as in LinkedList, it holds the value as well as the address of where the next element is stored.
